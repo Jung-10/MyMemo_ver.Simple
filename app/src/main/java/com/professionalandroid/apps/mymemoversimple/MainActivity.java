@@ -11,7 +11,6 @@ import java.text.SimpleDateFormat;
 
     public class MainActivity extends AppCompatActivity {
 
-
         EditText mMemoEdit = null;
         TextFile mTextFileManager = new TextFile(this);
         // 현재시간을 current에 저장
@@ -21,10 +20,10 @@ import java.text.SimpleDateFormat;
         Date date = new Date(current);
 
         // 메모장 앱에 들어간 시간 => 출력방식: yyyy.MM.dd HH:mm:ss
-        SimpleDateFormat SimpleDateFormat_Now = new SimpleDateFormat("메모장 들어온 시간 : " + "yyyy.MM.dd HH:mm:ss");
+        SimpleDateFormat SimpleDateFormat_current = new SimpleDateFormat("메모장에 들어온 시간 : " + "yyyy.MM.dd HH:mm:ss");
 
         // 변수에 값을 저장
-        String formatDate = SimpleDateFormat_Now.format(date);
+        String formatDate = SimpleDateFormat_current.format(date);
 
         TextView date_current;
 
