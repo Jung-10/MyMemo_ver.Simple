@@ -9,6 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     EditText MemoEdit = null;
+    TextFile TextFile = new TextFile(this);
 
 
 
