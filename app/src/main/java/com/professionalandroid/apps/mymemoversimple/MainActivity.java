@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View v) {
         switch (v.getId()) {
 
-            // 입력한 메모 내용을 파일로 저장하기
+            // 입력한 메모 내용을 저장하기
             case R.id.buttonsave: {
                 String memoData = MemoEdit.getText().toString();
                 TextFile.save(memoData);
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
 
-            // 저장한 메모 파일로 불러오기
+            // 이전에 저장한 메모 내용 불러오기
             case R.id.buttonload: {
                 String memoData = TextFile.load();
                 MemoEdit.setText(memoData);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
 
-                // 저장된 메모 파일 삭제하기
+                // 저장된 메모 삭제하기
             case R.id.buttondelete: {
                 TextFile.delete();
                 MemoEdit.setText("");
